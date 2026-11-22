@@ -1,0 +1,88 @@
+{
+  "updated": "2026-11-22",
+  "name": {"zh": "辛雅楠", "en": "Yanan Xin"},
+  "email": "yanan.xin.freya@gmail.com",
+  "github": "https://github.com/YananXFreya",
+  "url": "https://yananxfreya.github.io",
+  "role": {"zh": "信息与通信工程 · 博士研究生", "en": "PhD student · Information and Communication Engineering"},
+  "affiliation": {"zh": "重庆邮电大学 · 通信与信息工程学院", "en": "School of Communications and Information Engineering, Chongqing University of Posts and Telecommunications"},
+  "tagline": {"zh": "理解无线传播，探索高效通信。", "en": "Understanding propagation. Designing efficient communication."},
+  "bio": {
+    "zh": "我是重庆邮电大学信息与通信工程专业博士研究生，曾于 2024–2026 年在布鲁内尔大学联合培养。我的研究围绕智能反射面辅助无线通信，关注毫米波 MIMO 系统中波束成形、反射相位与接收端量化之间的关系。",
+    "en": "I am a PhD student in Information and Communication Engineering at Chongqing University of Posts and Telecommunications. I undertook a joint doctoral research visit at Brunel University from 2024 to 2026. My research focuses on intelligent reflecting surface (IRS)-assisted wireless communication, particularly the interplay between beamforming, reflection phases, and receiver quantization in millimeter-wave MIMO systems."
+  },
+  "bio_more": {
+    "zh": "在与合作者开展的研究中，我关注如何利用实值遗传算法联合设计波束成形与 IRS 相位，以及模数转换器的动态范围和量化位数如何影响频谱效率与误码率。我也参与山区通信覆盖建模项目，具有使用 MATLAB 开展通信系统建模、算法仿真和性能分析的经验。",
+    "en": "In collaborative research, I study joint beamforming and IRS phase design using real-valued genetic algorithms, and how ADC dynamic range and resolution affect spectral efficiency and bit error rate. I have also contributed to communication-coverage modeling for mountainous environments, with experience in MATLAB-based system modeling, algorithm simulation, and performance analysis."
+  },
+  "interests": [
+    {"title": {"zh": "智能反射面辅助通信", "en": "IRS-assisted communication"}, "text": {"zh": "通过反射相位设计研究传播路径与覆盖性能。", "en": "Reflection-phase design for propagation control and communication coverage."}, "tag": "RIS / IRS"},
+    {"title": {"zh": "毫米波与混合波束成形", "en": "mmWave & hybrid beamforming"}, "text": {"zh": "面向 MIMO-OFDM 系统，联合优化波束成形与多 IRS 配置。", "en": "Joint beamforming and multi-IRS optimization for MIMO-OFDM systems."}, "tag": "MIMO / OFDM"},
+    {"title": {"zh": "量化与接收端信号处理", "en": "Quantization & receiver design"}, "text": {"zh": "研究模 ADC 的动态范围、量化精度与通信性能。", "en": "Modulo ADC dynamic range, resolution, and their effects on communication performance."}, "tag": "Modulo ADC"}
+  ],
+  "education": [
+    {"id":"phd", "date":{"zh":"2022.09 — 至今","en":"Sep 2022 — present"}, "school":{"zh":"重庆邮电大学","en":"Chongqing University of Posts and Telecommunications"}, "degree":{"zh":"博士研究生 · 信息与通信工程","en":"PhD studies · Information and Communication Engineering"}, "detail":{"zh":"通信与信息工程学院；学术学位博士培养，在读。","en":"School of Communications and Information Engineering; enrolled in an academic doctoral program."}, "status":{"zh":"在读","en":"In progress"}},
+    {"id":"masters", "date":{"zh":"2019.09 — 2022.06","en":"Sep 2019 — Jun 2022"}, "school":{"zh":"重庆邮电大学","en":"Chongqing University of Posts and Telecommunications"}, "degree":{"zh":"工程硕士 · 电子与通信工程","en":"Master of Engineering · Electronics and Communication Engineering"}, "detail":{"zh":"全日制专业学位；2022 年 6 月毕业并获工程硕士学位。","en":"Full-time professional degree; graduated and awarded the Master of Engineering degree in June 2022."}, "status":{"zh":"已获学位","en":"Degree awarded"}},
+    {"id":"bachelors", "date":{"zh":"2015.09 — 2019.06","en":"Sep 2015 — Jun 2019"}, "school":{"zh":"成都信息工程大学","en":"Chengdu University of Information Technology"}, "degree":{"zh":"工学学士 · 通信工程","en":"Bachelor of Engineering · Communication Engineering"}, "detail":{"zh":"全日制本科；2019 年 6 月毕业并获工学学士学位。","en":"Full-time undergraduate program; graduated and awarded the Bachelor of Engineering degree in June 2019."}, "status":{"zh":"已获学位","en":"Degree awarded"}}
+  ],
+  "visits": [
+    {"date":{"zh":"2024.04 — 2026.04","en":"Apr 2024 — Apr 2026"}, "school":{"zh":"布鲁内尔大学 · 英国伦敦","en":"Brunel University · London, United Kingdom"}, "degree":{"zh":"博士联合培养经历","en":"Joint doctoral research visit"}, "detail":{"zh":"博士期间的联合培养与科研交流经历。","en":"Research training and academic exchange undertaken during doctoral studies."}}
+  ],
+  "papers": [
+    {
+      "id": "modulo-adc", "year": 2026,
+      "title": "Joint Transceiver Beamforming and IRS Phase Shift Design for mmWave MIMO with Modulo ADCs",
+      "title_zh": "采用模 ADC 的毫米波 MIMO 系统中收发波束成形与 IRS 相移联合设计",
+      "authors": ["Yanan Xin", "Wenyi Yan", "Lu Gan", "Qilie Liu", "John Cosmas"],
+      "venue": "ICC 2026 — IEEE International Conference on Communications",
+      "type": {"zh":"会议论文","en":"Conference paper"},
+      "meta": {"zh":"2026 · 英国格拉斯哥 · 第 1–6 页","en":"2026 · Glasgow, United Kingdom · pp. 1–6"},
+      "doi": "10.1109/ICC59461.2026.11587284",
+      "image": "modulo-system.webp",
+      "teaser": {"zh":"当接收信号超出 ADC 动态范围时，如何结合模采样与 IRS 波束设计改善通信性能？","en":"How can modulo sampling and IRS beamforming design improve communication when the input exceeds the ADC dynamic range?"},
+      "problem": {"zh":"毫米波链路容易受到遮挡，接收端 ADC 的有限动态范围还可能带来削波失真。该研究在 IRS 辅助的下行 MIMO 系统中纳入接收端量化误差，研究功率和恒模约束下的频谱效率优化。","en":"Millimeter-wave links are vulnerable to blockage, while a limited ADC dynamic range can introduce clipping distortion. This work models receiver quantization error in an IRS-assisted downlink MIMO system and studies spectral-efficiency maximization under transmit-power and constant-modulus constraints."},
+      "method": {"zh":"使用实值遗传算法搜索 IRS 反射相位，并基于更新后的等效信道，通过奇异值分解与注水功率分配更新收发波束成形。仿真比较模 ADC 与不同动态范围的传统 ADC。","en":"A real-valued genetic algorithm searches the IRS reflection phases. Transceiver beamformers are updated using singular value decomposition of the effective channel and water-filling power allocation. Simulations compare modulo ADCs with conventional ADCs operating at different dynamic ranges."},
+      "finding": {"zh":"在论文设定的仿真条件下，模 ADC 可减轻饱和削波的影响，并在较低量化位数时获得较好的频谱效率与误码率表现。结果取决于动态范围、位数与系统参数，应结合论文中的比较条件理解。","en":"Under the simulated conditions, modulo ADCs mitigate saturation-induced clipping and provide favorable spectral-efficiency and bit-error-rate performance at low resolution. The gains depend on dynamic range, bit depth, and system parameters, so comparisons should be read with their stated assumptions."},
+      "links": [
+        {"url":"https://doi.org/10.1109/ICC59461.2026.11587284", "label":{"zh":"DOI / 出版记录","en":"DOI / publication"}},
+        {"url":"https://bura.brunel.ac.uk/handle/2438/33616", "label":{"zh":"机构库与全文入口","en":"Repository & full text"}}
+      ],
+      "figures": [
+        {"file":"modulo-system.webp", "alt":{"zh":"IRS 辅助毫米波 MIMO 系统与接收端模 ADC 结构图","en":"IRS-assisted mmWave MIMO system with a modulo ADC at the receiver"}, "caption":{"zh":"系统结构：IRS 为受遮挡的直达链路提供反射路径，接收端采用模 ADC 与数字合并器。原始系统模型图。","en":"System model: the IRS provides a reflected path around a blocked direct link; the receiver uses a modulo ADC and digital combiner. Original system-model figure."}},
+        {"file":"modulo-ber.webp", "alt":{"zh":"量化位数 2 至 6 时，模 ADC、全动态范围及低动态范围传统 ADC 的误码率曲线","en":"BER versus 2–6 quantization bits for modulo, full-dynamic-range conventional, and low-dynamic-range conventional ADCs"}, "caption":{"zh":"误码率与量化位数：模 ADC 与低动态范围传统 ADC 的阈值均为输入峰值的 1/50；另与全动态范围传统 ADC 比较。每条曲线使用 40,000 个传输比特。仿真结果，原图保留。","en":"BER versus quantization resolution. The modulo and low-DR conventional ADC thresholds are both 1/50 of the input peak; a full-DR conventional ADC is also compared. Each curve uses 40,000 transmitted bits. Simulation result, reproduced from the original figure."}}
+      ]
+    },
+    {
+      "id": "multi-irs", "year": 2025,
+      "title": "Real-Valued Genetic Algorithm-Based Hybrid Beamforming Optimization in Multi-IRSs-Aided mmWave MIMO-OFDM Systems",
+      "title_zh": "多 IRS 辅助毫米波 MIMO-OFDM 系统中基于实值遗传算法的混合波束成形优化",
+      "authors": ["Yanan Xin", "Qilie Liu", "John Cosmas"],
+      "venue": "2025 EuCNC & 6G Summit",
+      "type": {"zh":"会议海报","en":"Conference poster"},
+      "meta": {"zh":"2025 · 波兰波兹南 · Poster Session II · P-2.23","en":"2025 · Poznań, Poland · Poster Session II · P-2.23"},
+      "doi": "",
+      "image": "multi-irs-system.webp",
+      "teaser": {"zh":"面对射频链数量受限的宽带毫米波系统，如何联合配置多个 IRS 与混合波束成形？","en":"How can multiple IRSs and hybrid beamforming be jointly configured in a wideband mmWave system with a limited number of RF chains?"},
+      "problem": {"zh":"大规模天线系统为每根天线配备独立射频链的成本较高。该研究采用混合波束成形结构，在多 IRS 辅助的毫米波 MIMO-OFDM 系统中研究频谱效率优化。","en":"Providing an independent RF chain for every antenna is costly in large-array systems. This work adopts a hybrid beamforming architecture and studies spectral-efficiency optimization in multi-IRS-assisted mmWave MIMO-OFDM systems."},
+      "method": {"zh":"构建多 IRS 与宽带信道模型，利用实值遗传算法联合优化发射端混合波束成形和 IRS 相移。通过不同 IRS 数量及优化算法的仿真对照评估方案。","en":"A multi-IRS wideband channel model is combined with a real-valued genetic algorithm to jointly optimize transmitter hybrid beamforming and IRS phase shifts. Simulations compare different numbers of IRSs and optimization algorithms."},
+      "finding": {"zh":"在给定布局和信道设置下，加入 IRS 后的优化方案具有更高的频谱效率；双 IRS 方案高于单 IRS 方案。算法对比中，RVGA 在所测试的 SINR 范围内优于 PSO 和 CCPSO。","en":"For the studied layout and channel settings, optimized IRS-assisted configurations achieve higher spectral efficiency, with two IRSs outperforming one. RVGA also outperforms PSO and CCPSO across the tested SINR range."},
+      "links": [
+        {"url":"https://www.eucnc.eu/2025/www.eucnc.eu/programme/poster-session-ii/index.html", "label":{"zh":"会议官方记录","en":"Conference record"}},
+        {"url":"https://opti-6g.sns-ju.eu/wp-content/uploads/2025/08/eucnc-poster4.pdf", "label":{"zh":"查看公开海报","en":"View public poster"}}
+      ],
+      "figures": [
+        {"file":"multi-irs-se.webp", "alt":{"zh":"无 IRS、单 IRS 和双 IRS 方案的优化频谱效率随 SINR 变化曲线","en":"Optimized spectral efficiency versus SINR with zero, one, and two IRSs"}, "caption":{"zh":"不同 IRS 数量的频谱效率比较。各方案在论文给定布局及参数下运行 RVGA 30 次并取平均；横轴为 SINR，纵轴为频谱效率。仿真结果，原图保留。","en":"Spectral efficiency for zero, one, and two IRSs. Each configuration averages 30 RVGA runs under the layout and parameters specified in the manuscript. The axes show SINR and spectral efficiency. Simulation result, original figure."}},
+        {"file":"multi-irs-algorithms.webp", "alt":{"zh":"RVGA、CCPSO 与 PSO 的频谱效率对比曲线","en":"Spectral-efficiency comparison of RVGA, CCPSO, and PSO"}, "caption":{"zh":"优化算法对比：在论文测试的 SINR 范围内比较 RVGA、CCPSO 和 PSO 的频谱效率。该结果对应给定仿真配置，不表示对任意场景的保证。","en":"Optimization comparison: spectral efficiency of RVGA, CCPSO, and PSO over the tested SINR range. Results apply to the specified simulation configuration, rather than constituting a guarantee for arbitrary scenarios."}}
+      ]
+    }
+  ],
+  "projects": [
+    {"id":"coverage", "date":{"zh":"2023 年 6 月起参与","en":"Participation began in June 2023"}, "title":{"zh":"山区环境下的 TRIS 辅助通信覆盖建模","en":"TRIS-assisted communication coverage in mountainous environments"}, "category":{"zh":"重庆市自然科学基金项目 · 主要参与人","en":"Natural Science Foundation of Chongqing project · Key participant"}, "body":{"zh":"项目围绕复杂山区地形下的区域通信覆盖展开。本人参与 RIS 优化算法文献综述和项目方案撰写，开展非理想信道传播数学建模与仿真分析，为覆盖增强方案提供建模与评估基础。","en":"This project studies regional communication coverage in complex mountainous terrain. My work included reviewing RIS optimization methods, contributing to the project proposal, and modeling and simulating non-ideal propagation channels to support coverage-enhancement studies."}, "outcome":{"zh":"工作内容：文献与方案整理、传播建模、仿真与性能分析。工具：MATLAB、Python。","en":"Work: literature and proposal preparation, propagation modeling, simulation, and performance analysis. Tools: MATLAB and Python."}, "paper":""},
+    {"id":"receiver", "date":{"zh":"2026 年成果","en":"2026 research output"}, "title":{"zh":"面向模 ADC 接收端的联合波束设计","en":"Joint beamforming with modulo-ADC receivers"}, "category":{"zh":"合作研究 · ICC 2026","en":"Collaborative research · ICC 2026"}, "body":{"zh":"围绕 IRS 辅助毫米波链路中的遮挡与量化限制，研究 IRS 相移、收发波束和功率分配之间的联合设计。该合作研究使用算法仿真评估频谱效率、误码率及收敛行为。","en":"This collaborative work investigates the joint design of IRS phases, transceiver beamformers, and power allocation under blockage and quantization constraints. Algorithm simulations evaluate spectral efficiency, bit error rate, and convergence."}, "outcome":{"zh":"成果：ICC 2026 会议论文。详细方法与仿真图见对应成果页面。","en":"Output: an ICC 2026 conference paper. Methods and simulation figures are presented in the corresponding publication entry."}, "paper":"modulo-adc"},
+    {"id":"wideband", "date":{"zh":"2025 年成果","en":"2025 research output"}, "title":{"zh":"多 IRS 宽带系统的混合波束成形优化","en":"Hybrid beamforming for wideband multi-IRS systems"}, "category":{"zh":"合作研究 · EuCNC & 6G Summit 2025","en":"Collaborative research · EuCNC & 6G Summit 2025"}, "body":{"zh":"研究有限射频链条件下的多 IRS 辅助 MIMO-OFDM 系统，利用实值遗传算法联合搜索波束成形与反射相位，并通过不同 IRS 配置和算法基线开展性能比较。","en":"This work studies multi-IRS-assisted MIMO-OFDM with a limited number of RF chains. A real-valued genetic algorithm jointly searches beamforming and reflection phases, with comparisons across IRS configurations and algorithmic baselines."}, "outcome":{"zh":"成果：EuCNC & 6G Summit 2025 海报展示 P-2.23。","en":"Output: poster P-2.23 at the 2025 EuCNC & 6G Summit."}, "paper":"multi-irs"}
+  ],
+  "skills": [
+    {"title":{"zh":"MATLAB 与通信仿真","en":"MATLAB & communication simulation"}, "text":{"zh":"通信链路与系统建模、参数配置、算法验证、性能评估及结果可视化。","en":"Link- and system-level modeling, parameter configuration, algorithm evaluation, performance analysis, and visualization."}},
+    {"title":{"zh":"科研计算与分析","en":"Research computing & analysis"}, "text":{"zh":"波束成形优化、信号处理、仿真结果整理；具备 Python 基础脚本编写能力。","en":"Beamforming optimization, signal processing, and simulation-result analysis; basic Python scripting."}}
+  ]
+}
