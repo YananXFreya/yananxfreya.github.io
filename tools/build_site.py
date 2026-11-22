@@ -112,11 +112,11 @@ RENDERERS={'home':home,'education':education,'publications':publications,'projec
 
 def document(lang,page,is_root=False,not_found=False):
     t=TEXT[lang]; label=LABELS[lang][PAGES.index(page)]
-    title=f'{loc(DATA["name"],lang)} · {label}'
+    title=f'{loc(DATA["name"],lang)} · {("页面未找到" if lang=="zh" else "Page not found") if not_found else label}'
     nav=''.join(f'<a href="{path(lang,p)}"{" aria-current=\"page\"" if p==page else ""}>{LABELS[lang][i]}</a>' for i,p in enumerate(PAGES))
     language=''.join(f'<a class="lang-link" href="{path(l,page)}" lang="{l}" hreflang="{l}" data-lang="{l}"{" aria-current=\"true\"" if l==lang else ""}>{"中文" if l=="zh" else "English"}</a>' for l in ['zh','en'])
     canonical=DATA['url']+('/' if is_root else path(lang,page))
-    content=RENDERERS[page](lang) if not not_found else f'<section class="page-heading"><div class="eyebrow">404</div><h1>页面未找到 / Page not found</h1><p><a href="/zh/">返回中文首页</a> · <a href="/en/">English home</a></p></section>'
+    content=RENDERERS[page](lang) if not not_found else f'<section class="page-heading"><div class="eyebrow">404</div><h1>{"页面未找到" if lang=="zh" else "Page not found"}</h1><p><a class="text-link" href="{path(lang)}">{t["back"]} {arrow()}</a></p></section>'
     structured={'@context':'https://schema.org','@type':'Person','name':'Yanan Xin','alternateName':'辛雅楠','url':DATA['url'],'sameAs':[DATA['github']],'affiliation':{'@type':'CollegeOrUniversity','name':'Chongqing University of Posts and Telecommunications'}}
     return f'''<!doctype html>
 <html lang="{'zh-CN' if lang=='zh' else 'en'}" data-dark="false"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
