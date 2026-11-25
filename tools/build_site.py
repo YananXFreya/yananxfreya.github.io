@@ -7,10 +7,10 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / 'content/site.json').read_text(encoding='utf-8'))
-PAGES = ['home', 'education', 'publications', 'projects', 'contact']
+PAGES = ['home', 'education', 'publications', 'projects', 'resources', 'contact']
 LABELS = {
- 'zh': ['首页', '教育与经历', '论文与成果', '研究与项目', '简历与联系'],
- 'en': ['Home', 'Education', 'Publications', 'Research', 'CV & Contact']
+ 'zh': ['首页', '教育与经历', '论文与成果', '研究与项目', '资源收藏', '简历与联系'],
+ 'en': ['Home', 'Education', 'Publications', 'Research', 'Resources', 'CV & Contact']
 }
 TEXT = {
  'zh': {'skip':'跳至正文','menu':'展开导航','intro':'个人简介','interests':'研究方向','selected':'代表成果','all':'查看全部成果','cv':'下载中文简历','contact':'联系我','details':'了解研究','education':'学位教育','visits':'联合培养与交流','methods':'方法与工具','problem':'研究问题','method':'研究方法','finding':'主要发现','figures':'代表性图表','image':'查看原尺寸图片','related':'查看对应成果','email':'电子邮箱','profile':'GitHub 账号','publiccv':'公开简历','cvintro':'简历汇总教育背景、研究经历、代表成果和技术能力。中文与英文版内容一致。','downloadzh':'中文简历 · PDF','downloaden':'英文简历 · PDF','talk':'欢迎交流','talktext':'欢迎就智能反射面、毫米波通信、波束成形与接收端信号处理开展学术交流，也欢迎联系通信研发与系统仿真相关机会。','updated':'更新于','based':'基于','license':'许可证','focus':'研究概览','figuretitle':'从传播环境到接收端','figuretext':'联合考虑反射路径、波束设计与信号量化。','work':'无线通信 · 系统建模 · 算法仿真','pubintro':'围绕智能反射面辅助通信的代表性合作研究，涵盖宽带混合波束成形与模 ADC 接收端设计。','eduintro':'从通信工程基础，到无线通信系统建模与优化研究。','projintro':'围绕传播建模、波束优化和接收端量化开展研究，以系统仿真连接算法与性能分析。','coauthor':'研究简介介绍与合作者共同完成的工作。','contactintro':'公开简历与学术交流入口。','sitecredit':'个人主页','figurecredit':'论文图表归原作者及相应权利人所有。','back':'返回首页'},
@@ -103,12 +103,33 @@ def projects(lang):
         result+='</div></article>'
     return result+'</section>'+skill_section(lang)
 
+RESOURCE_TEXT = {
+    'zh': {'intro':'按主题收藏的课程讲义与学习资料，便于复习基础、查阅方法和开展仿真。', 'visit':'访问课程主页', 'shortcuts':'常用章节', 'note':'以下为外部资源，讲义与示例由原作者维护。'},
+    'en': {'intro':'Course notes and learning resources organized by topic for reviewing fundamentals, looking up methods, and supporting simulations.', 'visit':'Visit course website', 'shortcuts':'Quick chapter links', 'note':'These external resources are maintained by their original authors.'}
+}
+
+def resources(lang):
+    t = RESOURCE_TEXT[lang]
+    result = page_heading(lang, 'resources', t['intro'])
+    for group in DATA['resources']:
+        result += f'<section class="resource-group" id="{e(group["id"], quote=True)}"><div class="section-title"><h2>{loc(group["title"],lang)}</h2></div>'
+        for item in group['items']:
+            result += f'<article class="resource-card" id="{e(item["id"], quote=True)}"><p class="resource-type">{loc(item["type"],lang)}</p><h3><a href="{e(item["url"], quote=True)}">{loc(item["title"],lang)}</a></h3>'
+            if lang == 'zh':
+                result += f'<p class="resource-original" lang="en">{e(item["original_title"])}</p>'
+            result += f'<p class="resource-meta"><strong>{e(item["source"])}</strong><br>{e(item["authors"])}</p><p>{loc(item["description"],lang)}</p><p class="resource-use">{loc(item["use"],lang)}</p>'
+            result += '<ul class="resource-tags">'+''.join(f'<li class="topic-tag">{loc(tag,lang)}</li>' for tag in item['tags'])+'</ul>'
+            result += f'<a class="button primary" href="{e(item["url"], quote=True)}">{t["visit"]}</a><nav class="resource-links" aria-label="{loc(item["title"],lang)} · {t["shortcuts"]}"><span>{t["shortcuts"]}</span>'
+            result += ''.join(f'<a href="{e(link["url"], quote=True)}">{loc(link["label"],lang)}</a>' for link in item['links'])+'</nav></article>'
+        result += '</section>'
+    return result+f'<p class="resource-note">{t["note"]}</p>'
+
 def contact(lang):
     t=TEXT[lang]
     result=page_heading(lang,'contact',t['contactintro'])+f'<section class="contact-grid"><div class="cv-panel"><span class="eyebrow">CURRICULUM VITAE</span><h2>{t["publiccv"]}</h2><p>{t["cvintro"]}</p><div class="cv-mark" aria-hidden="true">YX<span>CV</span></div><div class="cv-downloads">{button("/assets/cv/yanan-xin-zh.pdf",t["downloadzh"],True,True)}{button("/assets/cv/yanan-xin-en.pdf",t["downloaden"],False,True)}</div></div><div class="contact-info"><h2>{t["talk"]}</h2><p>{t["talktext"]}</p><dl><dt>{t["email"]}</dt><dd><a href="mailto:{DATA["email"]}">{DATA["email"]} {arrow()}</a></dd><dt>{t["profile"]}</dt><dd><a href="{DATA["github"]}">YananXFreya {arrow()}</a></dd></dl><p class="affiliation">{loc(DATA["affiliation"],lang)}</p></div></section>'
     return result.replace('CURRICULUM VITAE', '个人履历') if lang == 'zh' else result
 
-RENDERERS={'home':home,'education':education,'publications':publications,'projects':projects,'contact':contact}
+RENDERERS={'home':home,'education':education,'publications':publications,'projects':projects,'resources':resources,'contact':contact}
 
 def document(lang,page,is_root=False,not_found=False):
     t=TEXT[lang]; label=LABELS[lang][PAGES.index(page)]
@@ -116,13 +137,15 @@ def document(lang,page,is_root=False,not_found=False):
     nav=''.join(f'<a href="{path(lang,p)}"{" aria-current=\"page\"" if p==page else ""}>{LABELS[lang][i]}</a>' for i,p in enumerate(PAGES))
     language=''.join(f'<a class="lang-link" href="{path(l,page)}" lang="{l}" hreflang="{l}" data-lang="{l}"{" aria-current=\"true\"" if l==lang else ""}>{"中文" if l=="zh" else "English"}</a>' for l in ['zh','en'])
     canonical=DATA['url']+('/' if is_root else path(lang,page))
+    description=RESOURCE_TEXT[lang]['intro'] if page=='resources' else loc(DATA['bio'],lang)
+    social_description=description if page=='resources' else loc(DATA['tagline'],lang)
     content=RENDERERS[page](lang) if not not_found else f'<section class="page-heading"><div class="eyebrow">404</div><h1>{"页面未找到" if lang=="zh" else "Page not found"}</h1><p><a class="text-link" href="{path(lang)}">{t["back"]} {arrow()}</a></p></section>'
     structured={'@context':'https://schema.org','@type':'Person','name':'Yanan Xin','alternateName':'辛雅楠','url':DATA['url'],'sameAs':[DATA['github']],'affiliation':{'@type':'CollegeOrUniversity','name':'Chongqing University of Posts and Telecommunications'}}
     return f'''<!doctype html>
 <html lang="{'zh-CN' if lang=='zh' else 'en'}" data-dark="false"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{title}</title><meta name="description" content="{loc(DATA['bio'],lang)}"><meta name="theme-color" content="#153f40"><link rel="canonical" href="{canonical}">
+<title>{title}</title><meta name="description" content="{description}"><meta name="theme-color" content="#153f40"><link rel="canonical" href="{canonical}">
 <link rel="alternate" hreflang="zh-CN" href="{DATA['url']}{path('zh',page)}"><link rel="alternate" hreflang="en" href="{DATA['url']}{path('en',page)}"><link rel="alternate" hreflang="x-default" href="{DATA['url']}{path('zh',page)}">
-<meta property="og:title" content="{title}"><meta property="og:type" content="website"><meta property="og:url" content="{canonical}"><meta property="og:description" content="{loc(DATA['tagline'],lang)}"><link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<meta property="og:title" content="{title}"><meta property="og:type" content="website"><meta property="og:url" content="{canonical}"><meta property="og:description" content="{social_description}"><link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/assets/template.css"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/site.js" defer></script><script type="application/ld+json">{json.dumps(structured,ensure_ascii=False)}</script></head>
 <body data-language="{lang}" data-page="{page}" data-root="{str(is_root).lower()}"><a class="skip-link" href="#main">{t['skip']}</a>
 <header class="site-header"><div class="header-inner"><a href="{path(lang)}" class="brand" aria-label="{loc(DATA['name'],lang)} · {LABELS[lang][0]}"><span class="monogram" aria-hidden="true">YX<span></span></span><span>{loc(DATA['name'],lang)}</span></a>
@@ -144,6 +167,6 @@ def main():
             ET.SubElement(item,'lastmod').text=DATA['updated']
     ET.ElementTree(sitemap).write(ROOT/'sitemap.xml',encoding='utf-8',xml_declaration=True)
     (ROOT/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+DATA['url']+'/sitemap.xml\n',encoding='utf-8')
-    print('Built 10 bilingual pages, Chinese root page, 404, and sitemap.')
+    print(f'Built {2 * len(PAGES)} bilingual pages, Chinese root page, 404, and sitemap.')
 
 if __name__=='__main__': main()

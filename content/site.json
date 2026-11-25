@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-25",
   "name": {"zh": "辛雅楠", "en": "Yanan Xin"},
   "email": "yanan.xin.freya@gmail.com",
   "github": "https://github.com/YananXFreya",
@@ -80,6 +80,38 @@
     {"id":"coverage", "date":{"zh":"2023 年 6 月起参与","en":"Participation began in June 2023"}, "title":{"zh":"山区环境下的 TRIS 辅助通信覆盖建模","en":"TRIS-assisted communication coverage in mountainous environments"}, "category":{"zh":"重庆市自然科学基金项目 · 主要参与人","en":"Natural Science Foundation of Chongqing project · Key participant"}, "body":{"zh":"项目围绕复杂山区地形下的区域通信覆盖展开。本人参与 RIS 优化算法文献综述和项目方案撰写，开展非理想信道传播数学建模与仿真分析，为覆盖增强方案提供建模与评估基础。","en":"This project studies regional communication coverage in complex mountainous terrain. My work included reviewing RIS optimization methods, contributing to the project proposal, and modeling and simulating non-ideal propagation channels to support coverage-enhancement studies."}, "outcome":{"zh":"工作内容：文献与方案整理、传播建模、仿真与性能分析。工具：MATLAB、Python。","en":"Work: literature and proposal preparation, propagation modeling, simulation, and performance analysis. Tools: MATLAB and Python."}, "paper":""},
     {"id":"receiver", "date":{"zh":"2026 年成果","en":"2026 research output"}, "title":{"zh":"面向模 ADC 接收端的联合波束设计","en":"Joint beamforming with modulo-ADC receivers"}, "category":{"zh":"合作研究 · ICC 2026","en":"Collaborative research · ICC 2026"}, "body":{"zh":"围绕 IRS 辅助毫米波链路中的遮挡与量化限制，研究 IRS 相移、收发波束和功率分配之间的联合设计。该合作研究使用算法仿真评估频谱效率、误码率及收敛行为。","en":"This collaborative work investigates the joint design of IRS phases, transceiver beamformers, and power allocation under blockage and quantization constraints. Algorithm simulations evaluate spectral efficiency, bit error rate, and convergence."}, "outcome":{"zh":"成果：ICC 2026 会议论文。详细方法与仿真图见对应成果页面。","en":"Output: an ICC 2026 conference paper. Methods and simulation figures are presented in the corresponding publication entry."}, "paper":"modulo-adc"},
     {"id":"wideband", "date":{"zh":"2025 年成果","en":"2025 research output"}, "title":{"zh":"多 IRS 宽带系统的混合波束成形优化","en":"Hybrid beamforming for wideband multi-IRS systems"}, "category":{"zh":"合作研究 · EuCNC & 6G Summit 2025","en":"Collaborative research · EuCNC & 6G Summit 2025"}, "body":{"zh":"研究有限射频链条件下的多 IRS 辅助 MIMO-OFDM 系统，利用实值遗传算法联合搜索波束成形与反射相位，并通过不同 IRS 配置和算法基线开展性能比较。","en":"This work studies multi-IRS-assisted MIMO-OFDM with a limited number of RF chains. A real-valued genetic algorithm jointly searches beamforming and reflection phases, with comparisons across IRS configurations and algorithmic baselines."}, "outcome":{"zh":"成果：EuCNC & 6G Summit 2025 海报展示 P-2.23。","en":"Output: poster P-2.23 at the 2025 EuCNC & 6G Summit."}, "paper":"multi-irs"}
+  ],
+  "resources": [
+    {
+      "id": "wireless-communications",
+      "title": {"zh":"无线通信","en":"Wireless communication"},
+      "items": [
+        {
+          "id": "wireless-system-design",
+          "title": {"zh":"无线系统设计","en":"Wireless System Design"},
+          "original_title": "Wireless System Design",
+          "type": {"zh":"课程讲义 · EE6323","en":"Course notes · EE6323"},
+          "source": "IIT Madras",
+          "authors": "Radha Krishna Ganti, S. Aniruddhan, Uday Khankhoje",
+          "url": "https://www.ee.iitm.ac.in/uday/notes/wsd/index.html",
+          "description": {"zh":"沿着从发射比特到接收比特的完整无线链路，串联数字通信、射频收发机与天线传播。提供在线讲义、章节 PDF、MATLAB 配套示例和课程总结。","en":"Course notes following a wireless link from transmitted bits to recovered bits, connecting digital communications, RF transceivers, and antennas and propagation. Includes online chapters, PDFs, MATLAB examples, and a course summary."},
+          "use": {"zh":"适合复习 OFDM、信道估计与均衡、天线阵列与波束成形，以及接收机噪声和非理想因素。","en":"Useful for reviewing OFDM, channel estimation and equalization, antenna arrays and beamforming, and receiver noise and impairments."},
+          "tags": [
+            {"zh":"OFDM","en":"OFDM"},
+            {"zh":"天线阵列","en":"Antenna arrays"},
+            {"zh":"波束成形","en":"Beamforming"},
+            {"zh":"射频","en":"RF"},
+            {"zh":"MATLAB","en":"MATLAB"}
+          ],
+          "links": [
+            {"url":"https://www.ee.iitm.ac.in/uday/notes/wsd/arrays.html","label":{"zh":"天线阵列","en":"Antenna arrays"}},
+            {"url":"https://www.ee.iitm.ac.in/uday/notes/wsd/ofdm.html","label":{"zh":"OFDM","en":"OFDM"}},
+            {"url":"https://www.ee.iitm.ac.in/uday/notes/wsd/ofdmimp.html","label":{"zh":"OFDM 非理想因素","en":"OFDM impairments"}},
+            {"url":"https://www.ee.iitm.ac.in/uday/notes/wsd/ml2.html","label":{"zh":"阵列 MATLAB 示例","en":"Array MATLAB examples"}}
+          ]
+        }
+      ]
+    }
   ],
   "skills": [
     {"title":{"zh":"MATLAB 与通信仿真","en":"MATLAB & communication simulation"}, "text":{"zh":"通信链路与系统建模、参数配置、算法验证、性能评估及结果可视化。","en":"Link- and system-level modeling, parameter configuration, algorithm evaluation, performance analysis, and visualization."}},
