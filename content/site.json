@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "name": {"zh": "辛雅楠", "en": "Yanan Xin"},
   "email": "yanan.xin.freya@gmail.com",
   "github": "https://github.com/YananXFreya",
@@ -108,6 +108,98 @@
             {"url":"https://www.ee.iitm.ac.in/uday/notes/wsd/ofdm.html","label":{"zh":"OFDM","en":"OFDM"}},
             {"url":"https://www.ee.iitm.ac.in/uday/notes/wsd/ofdmimp.html","label":{"zh":"OFDM 非理想因素","en":"OFDM impairments"}},
             {"url":"https://www.ee.iitm.ac.in/uday/notes/wsd/ml2.html","label":{"zh":"阵列 MATLAB 示例","en":"Array MATLAB examples"}}
+          ]
+        },
+        {
+          "id": "sharetechnote",
+          "title": {"zh":"ShareTechnote 通信技术笔记","en":"ShareTechnote"},
+          "original_title": "ShareTechnote",
+          "type": {"zh":"技术教程与参考笔记","en":"Technical tutorials & reference notes"},
+          "source": "ShareTechnote",
+          "authors": "ShareTechnote",
+          "url": "https://www.sharetechnote.com/index.html",
+          "description": {"zh":"面向通信与电子工程的技术笔记集合，覆盖 LTE、LTE-Advanced、5G/NR、6G、NTN、Wi-Fi、SDR、射频、工程数学、MATLAB 与 Python 等主题。","en":"A collection of technical notes for communications and electronics, covering LTE, LTE-Advanced, 5G/NR, 6G, NTN, Wi-Fi, SDR, RF, engineering mathematics, MATLAB, Python, and related topics."},
+          "use": {"zh":"适合查询 4G/5G 协议流程、物理层概念、频段参数、MIMO 与波束管理等内容，可作为标准文档之外的图解式补充。","en":"Useful for looking up 4G/5G procedures, physical-layer concepts, band parameters, MIMO, and beam management as a visual supplement to standards documents."},
+          "tags": [
+            {"zh":"5G/NR","en":"5G/NR"},
+            {"zh":"LTE","en":"LTE"},
+            {"zh":"MIMO","en":"MIMO"},
+            {"zh":"射频","en":"RF"},
+            {"zh":"通信协议","en":"Protocols"}
+          ],
+          "links": [
+            {"url":"https://www.sharetechnote.com/html/5G/menu_5G.html","label":{"zh":"5G/NR 专题","en":"5G/NR topics"}}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mathematics-data-standards",
+      "title": {"zh":"数学、数据与标准","en":"Mathematics, data & standards"},
+      "items": [
+        {
+          "id": "nist-dlmf",
+          "title": {"zh":"NIST 数学函数数字图书馆","en":"NIST Digital Library of Mathematical Functions"},
+          "original_title": "NIST Digital Library of Mathematical Functions",
+          "type": {"zh":"数学函数数字参考库","en":"Digital reference for mathematical functions"},
+          "source": "NIST",
+          "authors": "National Institute of Standards and Technology",
+          "url": "https://dlmf.nist.gov/",
+          "description": {"zh":"按章节整理数学函数的定义、符号、恒等式、渐近展开、数值方法、图表与参考文献，并作为《NIST Handbook of Mathematical Functions》的在线配套资源。","en":"A chapter-based reference for definitions, notation, identities, asymptotic expansions, numerical methods, figures, tables, and references, accompanying the NIST Handbook of Mathematical Functions."},
+          "use": {"zh":"适合核对特殊函数公式、统一数学符号，并为解析推导、数值计算和仿真实现查找可靠参考。","en":"Useful for checking special-function formulas and notation, and for finding reliable references for analytical derivations, numerical computation, and simulation."},
+          "tags": [
+            {"zh":"特殊函数","en":"Special functions"},
+            {"zh":"数值方法","en":"Numerical methods"},
+            {"zh":"渐近分析","en":"Asymptotics"},
+            {"zh":"数学参考","en":"Mathematical reference"}
+          ],
+          "links": [
+            {"url":"https://dlmf.nist.gov/3","label":{"zh":"数值方法","en":"Numerical methods"}},
+            {"url":"https://dlmf.nist.gov/10","label":{"zh":"贝塞尔函数","en":"Bessel functions"}}
+          ]
+        },
+        {
+          "id": "nist",
+          "title": {"zh":"美国国家标准与技术研究院","en":"National Institute of Standards and Technology"},
+          "original_title": "National Institute of Standards and Technology",
+          "type": {"zh":"计量、标准与科研资源门户","en":"Measurement, standards & research portal"},
+          "source": "NIST",
+          "authors": "National Institute of Standards and Technology",
+          "url": "https://www.nist.gov/",
+          "description": {"zh":"NIST 官方门户，汇集计量科学、标准、先进通信、电子、信息技术、材料与量子科学等主题的研究项目、出版物、软件和数据资源。","en":"The official NIST portal for research projects, publications, software, and data across measurement science, standards, advanced communications, electronics, information technology, materials, quantum science, and related fields."},
+          "use": {"zh":"适合查找 NIST 技术报告、标准与测量资料、通信技术研究进展、科研软件及标准参考数据。","en":"Useful for finding NIST technical reports, standards and measurement resources, communications research, scientific software, and standard reference data."},
+          "tags": [
+            {"zh":"标准","en":"Standards"},
+            {"zh":"计量","en":"Metrology"},
+            {"zh":"先进通信","en":"Advanced communications"},
+            {"zh":"科研数据","en":"Research data"}
+          ],
+          "links": [
+            {"url":"https://www.nist.gov/publications","label":{"zh":"出版物","en":"Publications"}},
+            {"url":"https://www.nist.gov/advanced-communications","label":{"zh":"先进通信","en":"Advanced communications"}},
+            {"url":"https://www.nist.gov/services-resources/software","label":{"zh":"科研软件","en":"Software"}},
+            {"url":"https://www.nist.gov/srd","label":{"zh":"标准参考数据","en":"Standard Reference Data"}}
+          ]
+        },
+        {
+          "id": "nist-mathematics-statistics",
+          "title": {"zh":"NIST 数学与统计标准参考数据","en":"NIST Mathematics and Statistics Reference Data"},
+          "original_title": "Mathematics and Statistics — NIST Standard Reference Data",
+          "type": {"zh":"标准参考数据专题目录","en":"Standard reference data topic catalog"},
+          "source": "NIST Standard Reference Data",
+          "authors": "National Institute of Standards and Technology",
+          "url": "https://www.nist.gov/srd/mathematics-and-statistics",
+          "description": {"zh":"NIST 标准参考数据中的数学与统计专题页，收录用于验证统计软件准确性的认证数据集，以及用于测试分子模拟软件的标准参考模拟结果。","en":"The mathematics and statistics topic page in NIST Standard Reference Data, linking certified datasets for assessing statistical software and reference simulation results for testing molecular simulation software."},
+          "use": {"zh":"适合验证单变量统计、线性与非线性回归、方差分析等计算结果，也可查找经过整理的模拟基准。","en":"Useful for validating univariate statistics, linear and nonlinear regression, analysis of variance, and for locating curated simulation benchmarks."},
+          "tags": [
+            {"zh":"统计数据集","en":"Statistical datasets"},
+            {"zh":"软件验证","en":"Software validation"},
+            {"zh":"回归分析","en":"Regression"},
+            {"zh":"参考模拟","en":"Reference simulation"}
+          ],
+          "links": [
+            {"url":"https://www.itl.nist.gov/div898/strd/","label":{"zh":"SRD 140 统计参考数据集","en":"SRD 140 Statistical Reference Datasets"}},
+            {"url":"https://www.nist.gov/programs-projects/nist-standard-reference-simulation-website","label":{"zh":"SRD 173 标准参考模拟","en":"SRD 173 Reference Simulation"}}
           ]
         }
       ]

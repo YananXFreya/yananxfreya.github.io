@@ -104,8 +104,8 @@ def projects(lang):
     return result+'</section>'+skill_section(lang)
 
 RESOURCE_TEXT = {
-    'zh': {'intro':'按主题收藏的课程讲义与学习资料，便于复习基础、查阅方法和开展仿真。', 'visit':'访问课程主页', 'shortcuts':'常用章节', 'note':'以下为外部资源，讲义与示例由原作者维护。'},
-    'en': {'intro':'Course notes and learning resources organized by topic for reviewing fundamentals, looking up methods, and supporting simulations.', 'visit':'Visit course website', 'shortcuts':'Quick chapter links', 'note':'These external resources are maintained by their original authors.'}
+    'zh': {'intro':'按主题收藏的课程讲义、技术笔记、数学参考与科研数据，便于复习基础、查阅方法和开展仿真。', 'visit':'访问资源网站', 'shortcuts':'常用入口', 'note':'以下为外部资源，内容由相应作者或机构维护。'},
+    'en': {'intro':'Course notes, technical guides, mathematical references, and research data organized by topic for study, method lookup, and simulation.', 'visit':'Visit resource website', 'shortcuts':'Quick links', 'note':'These external resources are maintained by their respective authors or organizations.'}
 }
 
 def resources(lang):
